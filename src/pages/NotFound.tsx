@@ -20,7 +20,7 @@ const NotFound: React.FC = () => {
         
         {/* Subtitle */}
         <p className="text-lg sm:text-xl md:text-2xl font-medium text-gray-600 mb-8">
-          Ops! Parece que você de ajuda, por isso estamos aqui para te ajudar! <span className="text-primary-600">FlowCot!</span>
+          Ops! Parece que você precisa de ajuda, por isso estamos aqui para te ajudar! <span className="text-primary-600">FlowCot!</span>
         </p>
         
         {/* Description */}
