@@ -15,12 +15,12 @@ const MapContainer: React.FC<MapContainerProps> = ({ onSelectRegion }) => {
   const { isLoading, seasonType, setSeasonType } = useAppContext();
   
   return (
-    <div className="relative w-full h-full min-h-[400px] bg-sky-50">
+    <div className="relative w-full h-full bg-sky-50">
       {isLoading && (
         <div className="absolute inset-0 bg-gray-100/80 flex items-center justify-center z-50">
           <div className="flex flex-col items-center">
-            <div className="h-8 w-8 sm:h-10 sm:w-10 border-4 border-t-blue-500 border-blue-200 rounded-full animate-spin"></div>
-            <p className="mt-2 sm:mt-4 text-sm sm:text-base text-gray-600 font-medium">Carregando mapa...</p>
+            <div className="h-10 w-10 border-4 border-t-blue-500 border-blue-200 rounded-full animate-spin"></div>
+            <p className="mt-4 text-gray-600 font-medium">Carregando mapa...</p>
           </div>
         </div>
       )}
@@ -46,19 +46,17 @@ const MapContainer: React.FC<MapContainerProps> = ({ onSelectRegion }) => {
         </Suspense>
       </Canvas>
       
-      {/* Legend - Responsive positioning and size */}
-      <div className="absolute top-2 left-2 sm:top-4 sm:left-4 z-20 w-[120px] sm:w-[150px]">
+      <div className="absolute top-4 left-4 z-20">
         <MapLegend />
       </div>
 
-      {/* Controls - Responsive positioning and size */}
-      <div className="absolute top-2 right-2 sm:top-4 sm:right-4 z-20 flex flex-col gap-1 sm:gap-2">
-        <div className="bg-white/90 backdrop-blur-sm p-1 sm:p-2 rounded-md sm:rounded-lg shadow-sm sm:shadow-md">
+      <div className="absolute top-4 right-4 z-20 flex flex-col gap-2">
+        <div className="bg-white/90 backdrop-blur-sm p-2 rounded-lg shadow-md">
           <div className="space-y-1">
             <select 
               value={seasonType} 
               onChange={(e) => setSeasonType(e.target.value as 'dry' | 'wet')}
-              className="w-full text-xs sm:text-sm p-1 sm:p-1.5 border border-gray-200 rounded"
+              className="w-full text-xs p-1.5 border border-gray-200 rounded"
             >
               <option value="dry">Estação Seca</option>
               <option value="wet">Estação Chuvosa</option>
