@@ -1,5 +1,4 @@
 {
-  "homepage": "https://JoaoPedroAugusto.github.io/FlowCot",
   "name": "site-integrado-mapa-dinamico",
   "private": true,
   "version": "0.1.0",
@@ -8,9 +7,7 @@
     "dev": "vite --host 0.0.0.0",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@lottiefiles/react-lottie-player": "^3.5.3",
